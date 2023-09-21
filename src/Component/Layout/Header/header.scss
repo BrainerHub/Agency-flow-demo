@@ -1,0 +1,88 @@
+.mainHeader {
+  top: 0 !important;
+  background: #fff;
+  z-index: 10;
+}
+
+.borderBtn {
+  background: #fff !important;
+  border: 1px solid #000 !important;
+  border-bottom: 3px solid #000 !important;
+  box-shadow: none !important;
+  border-radius: 10px !important;
+  height: 40px;
+  color: #000 !important;
+  font-size: 14px !important;
+  text-transform: capitalize !important;
+  display: flex !important;
+  align-items: center !important;
+  font-weight: 600 !important;
+  gap: 10px;
+  padding: 0 10px !important;
+  svg {
+    height: 18px;
+    width: 18px;
+  }
+  .MuiBadge-badge {
+    background: #ffd540;
+    border: 1px solid #000;
+    top: -8px;
+    right: -9px;
+    font-size: 10px;
+    color: #000;
+  }
+  &__arrow {
+    border-left: 1px solid #000;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    padding-left: 5px;
+  }
+}
+.userDropdown {
+  background: #fff !important;
+  border: 1px solid #000 !important;
+  box-shadow: none !important;
+  border-radius: 10px !important;
+  height: 40px;
+  color: #000 !important;
+  font-size: 14px !important;
+  text-transform: capitalize !important;
+  display: flex !important;
+  align-items: center !important;
+  font-weight: 600;
+  gap: 0;
+  min-width: 0 !important;
+  overflow: hidden;
+  .MuiAvatar-root {
+    border-radius: 0 !important;
+  }
+  &__arrow {
+    border-left: 1px solid #000;
+    height: 100%;
+    display: flex;
+    align-items: center;
+  }
+}
+.memberGroup {
+  .MuiAvatar-root {
+    border: 1px solid #000 !important;
+    height: 32px;
+    width: 32px;
+  }
+}
+.menuToggleBtn {
+  display: none !important;
+}
+.mobileAddBtn {
+  display: none !important;
+}
+@media only screen and (max-width: 991px) {
+  .menuToggleBtn,
+  .mobileAddBtn {
+    display: flex !important;
+  }
+  .deskView {
+    display: none !important;
+  }
+}

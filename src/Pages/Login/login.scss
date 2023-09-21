@@ -1,0 +1,274 @@
+.formTemplate {
+    min-height: 100vh;
+    position: relative;
+    padding: 50px 20px;
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+  
+    .select {
+      position: relative;
+      display: flex;
+      justify-content: flex-end;
+    }
+  
+    &:after {
+      content: "";
+      height: 198px;
+      width: 348px;
+      display: block;
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      background-position: bottom;
+      background-repeat: no-repeat;
+    }
+  
+    &:before {
+      content: "";
+      height: 100vh;
+      width: 100vw;
+      display: block;
+      position: absolute;
+      top: 0;
+      right: 0;
+      background-repeat: no-repeat;
+      background-position-x: right;
+      background-position-y: top;
+      background-size: contain;
+    }
+  
+    &__container {
+      width: 100%;
+      max-width: 450px;
+      margin: 0 auto;
+      position: relative;
+      z-index: 1;
+    }
+  
+    &__logo {
+      margin-bottom: 38px;
+    }
+  
+    &--register {
+      min-height: 100vh;
+      position: relative;
+      padding: 50px 20px;
+      box-sizing: border-box;
+      display: flex;
+      align-items: center;
+  
+      &:after {
+        content: "";
+        height: 198px;
+        width: 348px;
+        display: block;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        background-position: bottom;
+        background-repeat: no-repeat;
+      }
+  
+      &:before {
+        content: "";
+        height: 100vh;
+        width: 100vw;
+        display: block;
+        position: absolute;
+        top: 0;
+        right: 0;
+        background-repeat: no-repeat;
+        background-position-x: right;
+        background-position-y: top;
+        background-size: contain;
+      }
+    }
+  }
+  
+  .formCard {
+    padding: 35px 45px;
+    background: #ffffff;
+    border: 1px solid #06b4c8;
+    box-shadow: 5px 5px 0px #06b4c8;
+    min-height: 468px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  
+    &__title {
+      font-family: "Red Hat Display" !important;
+      font-weight: 800 !important;
+      font-size: 18px !important;
+      line-height: 24px !important;
+      color: #202020;
+      margin: 0 0 35px !important;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+  
+    &__btn {
+      text-align: center;
+      margin-top: 35px;
+  
+      button {
+        min-width: 155px;
+  
+        &:disabled {
+          opacity: 30%;
+          pointer-events: none;
+        }
+  
+        .MuiCircularProgress-root {
+          // position: absolute;
+          // left: 25px;
+          // top: 12px;
+          color: #fff;
+        }
+      }
+    }
+  
+    &--green {
+      border: 1px solid #42db89;
+      box-shadow: 5px 5px 0px #42db89;
+  
+      .contentLink a {
+        color: #06b4c8 !important;
+      }
+    }
+  }
+  
+  .formGroup {
+    margin-bottom: 22px;
+  
+    .MuiSelect-select {
+      min-height: 0 !important;
+      box-sizing: border-box;
+      padding: 10px;
+      height: 36px !important;
+    }
+  
+    fieldset {
+      border: 0.5px solid #c4c4c4 !important;
+      border-radius: 0;
+      height: 36px;
+      top: 0;
+  
+      legend {
+        display: none;
+      }
+    }
+  
+    input {
+      font-family: "Red Hat Display" !important;
+      padding: 12px;
+      height: 36px;
+      box-sizing: border-box;
+      font-weight: 400;
+      font-size: 12px;
+      line-height: 18px;
+      color: #202020 !important;
+    }
+  
+    .passwordIcon {
+      float: right;
+      margin-right: 9px;
+      margin-top: -30px;
+      position: relative;
+      cursor: pointer;
+    }
+  
+    .MuiInputLabel-root {
+      font-family: "Red Hat Display" !important;
+      font-weight: 400;
+      font-size: 12px;
+      line-height: 18px;
+      color: #202020 !important;
+      margin: 0 0 4px;
+      position: static;
+      transform: none;
+    }
+  }
+  
+  .linktag {
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 15px;
+    color: "rgba(113, 112, 112, 1)";
+    margin: 0;
+  
+    a {
+      color: "rgba(113, 112, 112, 1)";
+      font-weight: 700;
+    }
+  }
+  
+  .contentLink {
+    text-align: center;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 18px;
+    color: #717070;
+    margin-top: 18px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  
+    div {
+      color: #42db89;
+      margin-left: 3px;
+      text-decoration: none;
+      font-weight: bold !important;
+      cursor: pointer;
+    }
+  }
+  
+  .errorText {
+    font-size: 12px !important;
+    color: red;
+    margin: 4px 0 0 !important;
+  }
+  
+  @media only screen and (max-width: 1200px) {
+    .formTemplate {
+      &:before {
+        height: 65vw;
+      }
+  
+      &--register {
+        &:before {
+          height: 65vw;
+          background-size: cover;
+        }
+      }
+    }
+  }
+  
+  @media only screen and (max-width: 991px) {
+    .formTemplate {
+      &--register {
+        min-height: 100vh;
+        padding: 100px 20px;
+        align-items: flex-start;
+        &:before {
+          height: 80vw;
+          background-size: cover;
+        }
+        &:after {
+          height: 145px;
+          width: 250px;
+          background-size: contain;
+        }
+        .formTemplate__logo {
+          margin-bottom: 45px;
+        }
+      }
+    }
+  
+    .formCard {
+      padding: 35px;
+    }
+  }
+  
